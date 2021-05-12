@@ -5,9 +5,12 @@
   "author": "Renato Castro <renatocastro02@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --passWithNoTests",
-    "test:watch": "jest --passWithNoTests --watch",
-    "test:staged": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --runInBand",
+    "test:silent": "yarn test -- --silent --noStackTrace",
+    "test:watch": "yarn test -- --watch -c jest-unit-config.js",
+    "test:integration": "yarn test -- --watch -c jest-integration-config.js",
+    "test:staged": "yarn test:silent -- --findRelatedTests",
+    "test:ci": "yarn test:silent  -- --coverage"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
