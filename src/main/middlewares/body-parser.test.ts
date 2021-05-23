@@ -6,7 +6,7 @@ describe('Body Parser Middleware', () => {
     res.send(req.body);
   });
   test('Should parse body as json', async () => {
-    await await request(app)
+    await request(app)
       .post('/test_body_parser')
       .send({ name: 'Renato' })
       .expect({ name: 'Renato' });
