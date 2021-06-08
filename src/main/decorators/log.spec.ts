@@ -1,4 +1,4 @@
-import { serverError, ok } from '../../presentation/helpers';
+import { serverError, ok } from '../../presentation/helpers/http';
 import {
   Controller,
   HttpRequest,
