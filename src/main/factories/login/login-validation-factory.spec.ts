@@ -3,8 +3,8 @@ import {
   RequiredFieldValidation,
   EmailValidation,
 } from '../../../presentation/helpers/validators';
-import { makeLoginValidation } from './login-validation';
-import { Validation } from '../../../presentation/controllers/signup/signup-protocols';
+import { makeLoginValidation } from './login-validation-factory';
+import { Validation } from '../../../presentation/controllers/signup/signup-controller-protocols';
 import { EmailValidator } from '../../../presentation/protocols/email-validator';
 
 const makeEmailValidator = (): EmailValidator => {

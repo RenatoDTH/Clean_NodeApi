@@ -1,5 +1,5 @@
-import { makeSignUpValidation } from './signup-validation';
-import { Validation } from '../../../presentation/controllers/signup/signup-protocols';
+import { makeSignUpValidation } from './signup-validation-factory';
+import { Validation } from '../../../presentation/controllers/signup/signup-controller-protocols';
 import { EmailValidator } from '../../../presentation/protocols/email-validator';
 import {
   EmailValidation,
