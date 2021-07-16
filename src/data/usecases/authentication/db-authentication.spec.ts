@@ -1,12 +1,12 @@
 import {
   AccountModel,
-  LoadAccountByEmailRepository,
   AuthenticationModel,
   HashComparer,
   Encrypter,
-  UpdateAccessTokenRepository,
 } from './db-authentication-protocols';
 import { DbAuthentication } from './db-authentication';
+import { LoadAccountByEmailRepository } from '../../protocols/db/account/load-account-by-email-repository';
+import { UpdateAccessTokenRepository } from '../../protocols/db/account/update-access-token-repository';
 
 const makeFakeAccount = (): AccountModel => {
   return {
