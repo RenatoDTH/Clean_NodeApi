@@ -29,6 +29,7 @@ export class SignUpController implements Controller {
         password,
       });
 
+      account.name = 'TESTE';
       return ok(account);
     } catch (error) {
       return serverError(error);
